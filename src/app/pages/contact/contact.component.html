@@ -1,0 +1,54 @@
+<div class="video-container">
+    <video autoplay="true" muted loop id="bg-video">
+        <source src="assets/bg-video.mp4" type="video/mp4" />
+    </video>
+</div>
+<section class="contact-section">
+
+    <div class="overlay"></div>
+
+    <div class="content">
+        <h1 class="section-title">Get in Touch</h1>
+        <p class="section-subtitle">
+            We’d love to hear from you. Let’s build something great together!
+        </p>
+
+        <div class="contact-container">
+            <!-- Contact Form -->
+            <mat-card class="contact-card">
+                <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Full Name</mat-label>
+                        <input matInput name="name" placeholder="Enter Full Name"
+                            [(ngModel)]="contact.name" required />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Email Address</mat-label>
+                        <input matInput type="email" name="email" placeholder="Enter Email id"
+                            [(ngModel)]="contact.email" required />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Message</mat-label>
+                        <textarea matInput name="message" rows="4" placeholder="Enter Your Query"
+                            [(ngModel)]="contact.message" required></textarea>
+                    </mat-form-field>
+
+                    <button mat-raised-button color="primary" type="submit" >
+                        Send Message
+                    </button>
+                </form>
+            </mat-card>
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h2>Our Office</h2>
+                <p>Shyam IT Services</p>
+                <p>Noida, Uttar Pradesh, India</p>
+                <p><mat-icon>email </mat-icon> {{emailid}} </p>
+                <p><mat-icon>call </mat-icon> {{mobile}} </p>
+            </div>
+        </div>
+    </div>
+</section>

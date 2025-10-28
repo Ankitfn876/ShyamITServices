@@ -1,0 +1,24 @@
+<mat-toolbar color="primary" class="main-toolbar" [class.scrolled]="isScrolled">
+  <span class="logo">Shyam IT Services</span>
+
+  <span class="spacer"></span>
+
+  <nav class="nav-links" *ngIf="!isMobileMenuOpen">
+    <a mat-button routerLink="/">Home</a>
+    <a mat-button routerLink="/services">Services</a>
+    <a mat-button routerLink="/portfolio">Portfolio</a>
+    <a mat-button routerLink="/contact">Contact</a>
+  </nav>
+
+  <button mat-icon-button class="menu-btn" (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+
+<!-- Mobile menu -->
+<mat-nav-list *ngIf="isMobileMenuOpen" class="mobile-menu">
+  <a mat-list-item routerLink="/" (click)="toggleMenu()">Home</a>
+  <a mat-list-item routerLink="/services" (click)="toggleMenu()">Services</a>
+  <a mat-list-item routerLink="/portfolio" (click)="toggleMenu()">Portfolio</a>
+  <a mat-list-item routerLink="/contact" (click)="toggleMenu()">Contact</a>
+</mat-nav-list>

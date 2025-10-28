@@ -1,0 +1,13 @@
+.content {
+  padding: 20px;
+  margin-top: 64px; /* height of toolbar */
+}
+/* === Footer === */
+footer {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.9);
+  color: #aaa;
+  padding: 20px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}

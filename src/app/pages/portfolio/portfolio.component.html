@@ -1,0 +1,32 @@
+<div class="video-container">
+  <video autoplay="true" muted loop id="bg-video">
+    <source src="assets/bg-video.mp4" type="video/mp4" />
+  </video>
+</div>
+
+<section class="portfolio-section">
+ 
+
+  <div class="overlay"></div>
+
+  <div class="content">
+    <h1 class="section-title">Our Portfolio</h1>
+    <p class="section-subtitle">
+      Explore our latest web and mobile solutions designed with precision, creativity, and technology.
+    </p>
+
+    <div class="portfolio-grid">
+      <mat-card class="portfolio-card" *ngFor="let project of projects">
+        <div class="image-container">
+          <img [src]="project.image" alt="{{ project.title }}" class="portfolio-image" />
+          <div class="hover-overlay">
+            <h2>{{ project.title }}</h2>
+            <p>{{ project.description }}</p>
+            <a [href]='project.link' target="_blank">View Project</a>
+            <!-- <button mat-raised-button color="accent">View Project</button> -->
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+<div class="video-container">
+  <video autoplay="true" muted loop id="bg-video">
+    <source src="assets/bg-video.mp4" type="video/mp4" />
+  </video>
+</div>
+
+<section class="services-section">
+ 
+  <!-- 🖤 Overlay Layer -->
+  <div class="overlay"></div>
+
+  <!-- 🌟 Main Content -->
+  <div class="content">
+    <h1 class="section-title">Our Core Services</h1>
+    <p class="section-subtitle">
+      We craft cutting-edge web and mobile solutions to transform your business ideas into reality.
+    </p>
+
+    <div class="services-grid">
+      <mat-card class="service-card" *ngFor="let service of services">
+        <mat-icon class="service-icon">{{ service.icon }}</mat-icon>
+        <h2 class="service-title">{{ service.title }}</h2>
+        <p class="service-desc">{{ service.description }}</p>
+      </mat-card>
+    </div>
+  </div>
+</section>
