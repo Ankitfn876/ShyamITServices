@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/shyamitservices/browser/browser/index.html",
+            "outputPath": "dist/shyamitservices/browser/browser/_redirects",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
